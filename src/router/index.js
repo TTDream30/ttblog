@@ -36,10 +36,16 @@ let routes = [{
 		component: () => import('../views/Layout.vue'),
 	},
 	{
-		path: '/tables',
-		name: 'Tables',
+		path: '/teamSpace',
+		name: 'TeamSpace',
 		layout: "dashboard",
-		component: () => import('../views/Tables.vue'),
+		component: () => import('../views/TeamSpace.vue'),
+	},
+	{
+		path: '/teamSpaceEmpty',
+		name: 'TeamSpaceEmpty',
+		layout: "dashboard",
+		component: () => import('../views/TeamSpaceEmpty.vue'),
 	},
 	{
 		path: '/billing',

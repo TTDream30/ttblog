@@ -51,7 +51,10 @@
         </router-link>
       </a-menu-item>
       <a-menu-item>
-        <router-link to="/tables">
+        <!-- 判断路径 -->
+        <router-link
+          :to="userInfo.team == '' ? '/TeamSpaceEmpty' : '/TeamSpace'"
+        >
           <span class="icon">
             <svg
               width="20"
@@ -292,6 +295,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   props: {
     // Sidebar collapsed status.
@@ -317,5 +322,8 @@ export default {
       // sidebarCollapsedModel: this.sidebarCollapsed,
     };
   },
+  computed: mapState({
+    userInfo: (state) => state.users.userInfo,
+  }),
 };
 </script>
