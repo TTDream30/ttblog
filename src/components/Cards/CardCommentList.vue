@@ -51,7 +51,9 @@
           src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
         />
         <a-list-item-meta :description="item.datetime.fromNow()">
-          <a slot="title" :href="item.href">{{ item.title }}</a>
+          <div style="cursor: pointer" @click="handleArticle" slot="title">
+            {{ item.title }}
+          </div>
           <a-avatar slot="avatar" :src="item.avatar" />
         </a-list-item-meta>
         <a-tooltip
@@ -63,10 +65,12 @@
         {{ item.content }}
       </a-list-item>
     </a-list>
+    <article-modal ref="modal"></article-modal>
   </a-card>
 </template>
 <script>
 import moment from "moment";
+import ArticleModal from "../modal/ArticleModal.vue";
 const listData = [];
 for (let i = 0; i < 23; i++) {
   listData.push({
@@ -82,6 +86,7 @@ for (let i = 0; i < 23; i++) {
 }
 
 export default {
+  components: { ArticleModal },
   data() {
     return {
       listData,
@@ -107,6 +112,9 @@ export default {
       this.likes = 0;
       this.dislikes = 1;
       this.action = "disliked";
+    },
+    handleArticle() {
+      this.$refs.modal.isVisible = true;
     },
   },
 };

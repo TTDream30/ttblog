@@ -1,5 +1,5 @@
 <!-- 
-	This is the billing page, it uses the dashboard layout in: 
+	This is the billing pcounts, it uses the dashboard layout in: 
 	"./layouts/Dashboard.vue" .
  -->
 
@@ -20,13 +20,22 @@
       <!-- Your Transactions Column -->
       <a-col :span="24" :md="8" class="mb-24">
         <a-row class="mb-24">
-          <CardArticleHotList :data="transactionsData"></CardArticleHotList>
+          <CardArticleHotList
+            :data="dataArticle"
+            :columns="columnsArticle"
+          ></CardArticleHotList>
         </a-row>
         <a-row class="mb-24">
-          <CardAuthorHotList :data="transactionsData"></CardAuthorHotList>
+          <CardAuthorHotList
+            :data="dataAuthor"
+            :columns="columnsAuthor"
+          ></CardAuthorHotList>
         </a-row>
         <a-row class="mb-24">
-          <CardTeamHotList :data="transactionsData"></CardTeamHotList>
+          <CardTeamHotList
+            :data="dataTeam"
+            :columns="columnsTeam"
+          ></CardTeamHotList>
         </a-row>
         <!-- Your Transactions Card -->
         <!-- / Your Transactions Card -->
@@ -68,7 +77,7 @@ const salaries = [
     value: 49000,
     prefix: "+$",
     icon: `
-										<img src="images/logos/paypal-logo-2.png" alt="">`,
+										<img src="imcountss/logos/paypal-logo-2.png" alt="">`,
     title: "Paypal",
     content: "Freelance Payment",
   },
@@ -155,6 +164,175 @@ const transactionsData = [
   },
 ];
 
+const columnsArticle = [
+  {
+    dataIndex: "name",
+    key: "name",
+    slots: { title: "customTitle" },
+    scopedSlots: { customRender: "name" },
+  },
+  {
+    dataIndex: "counts",
+    key: "counts",
+    slots: { title: "countsTitle" },
+    scopedSlots: { customRender: "counts" },
+  },
+];
+
+const dataArticle = [
+  {
+    key: "1",
+    name: "Go语言环境的搭建",
+    counts: 3200,
+  },
+  {
+    key: "2",
+    name: "GoWeb框架 -- Gin框架的使用",
+    counts: 2800,
+  },
+  {
+    key: "3",
+    name: "K8s的基本认识",
+    counts: 2405,
+  },
+  {
+    key: "4",
+    name: "Docker的了解与入门",
+    counts: 2005,
+  },
+  {
+    key: "5",
+    name: "构建自己的Docker镜像",
+    counts: 1905,
+  },
+];
+
+const columnsAuthor = [
+  {
+    dataIndex: "users",
+    key: "users",
+    slots: { title: "customTitle" },
+    scopedSlots: { customRender: "users" },
+  },
+  {
+    dataIndex: "counts",
+    key: "counts",
+    slots: { title: "countsTitle" },
+    scopedSlots: { customRender: "counts" },
+  },
+];
+
+const dataAuthor = [
+  {
+    key: "1",
+    users: {
+      name: "Go语言环境的搭建",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 3200,
+  },
+  {
+    key: "2",
+    users: {
+      name: "GoWeb框架 -- Gin框架的使用",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 2800,
+  },
+  {
+    key: "3",
+    users: {
+      name: "K8s的基本认识",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 2405,
+  },
+  {
+    key: "4",
+    users: {
+      name: "Docker的了解与入门",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 2005,
+  },
+  {
+    key: "5",
+    users: {
+      name: "构建自己的Docker镜像",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 1905,
+  },
+];
+
+const columnsTeam = [
+  {
+    dataIndex: "users",
+    key: "users",
+    slots: { title: "customTitle" },
+    scopedSlots: { customRender: "users" },
+  },
+  {
+    dataIndex: "counts",
+    key: "counts",
+    slots: { title: "countsTitle" },
+    scopedSlots: { customRender: "counts" },
+  },
+];
+
+const dataTeam = [
+  {
+    key: "1",
+    users: {
+      name: "TT Dream",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 3200,
+  },
+  {
+    key: "2",
+    users: {
+      name: "XXX",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 2800,
+  },
+  {
+    key: "3",
+    users: {
+      name: "STUDYTEAM",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 2405,
+  },
+  {
+    key: "4",
+    users: {
+      name: "XWTEAM",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 2005,
+  },
+  {
+    key: "5",
+    users: {
+      name: "ZZTT",
+      avatar:
+        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    },
+    counts: 1905,
+  },
+];
+
 export default {
   components: {
     CardCredit,
@@ -172,6 +350,12 @@ export default {
     return {
       // Salary cards data
       salaries,
+      dataArticle,
+      dataAuthor,
+      dataTeam,
+      columnsArticle,
+      columnsAuthor,
+      columnsTeam,
 
       // Associating "Invoices" list data with its corresponding property.
       invoiceData,

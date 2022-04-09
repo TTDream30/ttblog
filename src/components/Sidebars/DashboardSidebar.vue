@@ -17,7 +17,7 @@
     :style="{ backgroundColor: 'transparent' }"
   >
     <div class="brand">
-      <img src="images/logo-ct-black.png" alt="" /> <span>TT BLOGWEB</span>
+      <img src="images/logo-tt-black.png" alt="" /> <span>TT BLOGWEB</span>
     </div>
     <hr />
 
@@ -79,7 +79,7 @@
         </router-link>
       </a-menu-item>
       <a-menu-item>
-        <router-link to="/billing">
+        <router-link to="/socialSpace">
           <span class="icon">
             <svg
               width="20"
@@ -124,7 +124,7 @@
           <span class="label">RTL</span>
         </router-link>
       </a-menu-item> -->
-      <a-menu-item class="menu-item-header"> Account Pages </a-menu-item>
+      <a-menu-item class="menu-item-header"> 个人模块 </a-menu-item>
       <a-menu-item>
         <router-link to="/profile">
           <span class="icon">
@@ -147,7 +147,7 @@
         </router-link>
       </a-menu-item>
       <a-menu-item>
-        <router-link to="/sign-in">
+        <router-link to="/setting">
           <span class="icon">
             <svg
               width="20"
@@ -245,7 +245,7 @@
 
     <!-- Sidebar Footer -->
     <div class="aside-footer">
-      <div class="footer-box">
+      <!-- <div class="footer-box">
         <span class="icon">
           <svg
             width="20"
@@ -278,18 +278,18 @@
         >
           DOCUMENTATION
         </a-button>
-      </div>
+      </div> -->
     </div>
     <!-- / Sidebar Footer -->
 
-    <a-button
+    <!-- <a-button
       type="primary"
       href="https://www.creative-tim.com/product/muse-vue-ant-design-dashboard-pro"
       block
       target="_blank"
     >
       UPGRADE TO PRO
-    </a-button>
+    </a-button> -->
   </a-layout-sider>
   <!-- / Main Sidebar -->
 </template>

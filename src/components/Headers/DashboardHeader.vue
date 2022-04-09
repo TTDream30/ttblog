@@ -159,6 +159,8 @@
             </svg>
             <span>Sign In</span>
           </router-link>
+
+          <div v-if="userInfo" class="logout" @click="logoutClick">登出</div>
           <div v-if="userInfo" class="btn-sign-in">
             <svg
               width="20"
@@ -175,12 +177,13 @@
               />
             </svg>
             <span>{{ userInfo.name }}</span>
-            <div class="logout" @click="logoutClick">登出</div>
+            <!-- <div class="logout" @click="logoutClick">登出</div> -->
           </div>
+
           <!-- / Header Control Buttons -->
 
           <!-- 搜索栏 -->
-          <a-input-search
+          <!-- <a-input-search
             class="header-search"
             :class="searchLoading ? 'loading' : ''"
             placeholder="Type here…"
@@ -202,7 +205,7 @@
                 fill="#111827"
               />
             </svg>
-          </a-input-search>
+          </a-input-search> -->
           <!-- / Header Search Input -->
         </a-col>
         <!-- / Header Control Column -->

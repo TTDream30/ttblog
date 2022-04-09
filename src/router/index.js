@@ -48,10 +48,16 @@ let routes = [{
 		component: () => import('../views/TeamSpaceEmpty.vue'),
 	},
 	{
-		path: '/billing',
-		name: 'Billing',
+		path: '/socialSpace',
+		name: 'SocialSpace',
 		layout: "dashboard",
-		component: () => import('../views/Billing.vue'),
+		component: () => import('../views/SocialSpace.vue'),
+	},
+	{
+		path: '/setting',
+		name: 'Setting',
+		layout: "dashboard",
+		component: () => import('../views/Setting.vue'),
 	},
 	{
 		path: '/rtl',
